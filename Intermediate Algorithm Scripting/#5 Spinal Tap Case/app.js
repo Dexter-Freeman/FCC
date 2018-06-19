@@ -20,4 +20,4 @@ function spinalCase(str) {
   return strPrep(str).toLowerCase();
 }
 
-document.write(spinalCase('This Is Spinal Tap'));
+console.log(spinalCase('This Is Spinal Tap'));

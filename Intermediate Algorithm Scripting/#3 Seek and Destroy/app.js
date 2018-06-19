@@ -1,6 +1,7 @@
 function destroyer(arr) {
   // Remove all the values
   const args = [].slice.call(arguments);
+  // second ver: const args = [...arguments];
   const removeMe = args.slice(1);
   return arr.filter(elem => !removeMe.includes(elem));
 };
