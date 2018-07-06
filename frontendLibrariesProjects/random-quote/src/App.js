@@ -5,16 +5,15 @@ import './App.css';
 
 
 const QUOTES = [
-  {text: "text", author: "Dexter"},
-  {text: "text2", author: "Dexter2"},
-  {text: "text3", author: "Dexter3"},
-  {text: "text4", author: "Dexter4"},
-  {text: "text5", author: "Dexter5"},
-  {text: "text6", author: "Dexter6"},
-  {text: "text7", author: "Dexter7"},
-  {text: "text8", author: "Dexter8"},
-  {text: "text9", author: "Dexter9"},
-  {text: "text10", author: "Dexter10"},
+  {text: "В действительности существуют два мага — природа и наши желания.", author: "Ишхан Геворгян"},
+  {text: "History will be kind to me for I intend to write it.", author: "Winston S. Churchill"},
+  {text: "I hated every minute of training, but I said, 'Don’t quit. Suffer now and live the rest of your life as a champion'.", author: "Muhammad Ali"},
+  {text: "We are all failures. At least the best of us are.", author: "J.M. Barrie"},
+  {text: "If you want happiness for an hour – take a nap. If you want happiness for a day – go fishing. If you want happiness for a year – inherit a fortune. If you want happiness for a life time – help someone else.", author: "Chinese proverb"},
+  {text: "There are no short cuts to any place worth going.", author: "Beverly Sills"},
+  {text: "I have not failed. I've just found 10,000 ways that won't work.", author: "Thomas A. Edison"},
+  {text: "Every strike brings me closer to the next home run", author: "Babe Ruth"},
+  {text: "The most difficult thing is the decision to act, the rest is merely tenacity.", author: "Amelia Earhart"},
   ]
   
 
@@ -29,7 +28,7 @@ class Card extends Component {
   };
 
   getQuote() {
-    const idx = Math.round(Math.random() * 9);
+    const idx = Math.round(Math.random() * (QUOTES.length - 1));
     const newQuote = QUOTES[idx];
     // console.log(`newQuote - ${JSON.stringify(newQuote)}`);
     this.setState({
@@ -46,7 +45,7 @@ class Card extends Component {
     return (
       <div className="wrapper">
         <div id="quote-box">
-          <TextQuote text={this.state.text} />
+          <TextQuote text={this.state.text.toUpperCase()} />
           <AuthorQuote author={this.state.author} />
           <Tweet text={this.state.text} />
           <NewQuote handleClick={this.getQuote} />
@@ -76,7 +75,13 @@ const AuthorQuote = props => {
 
 const NewQuote = props => {
   return (
-    <button id="new-quote" onClick={props.handleClick}>Get new quote</button>
+    <button 
+      id="new-quote" 
+      onClick={props.handleClick}
+      className="btn btn-outline-dark"
+    >
+      New quote
+    </button>
   )
 };
 
@@ -88,7 +93,7 @@ const Tweet = props => {
     target="_blank" 
     href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${encodeURIComponent(props.text)}`}
     >
-      Tweet me!
+      <i className="fab fa-twitter"></i>
     </a>
   );
 };
@@ -102,6 +107,7 @@ const Footer = function() {
         target="_blank"
       >
         Dexter Freeman
+        <i class="fab fa-codepen"></i>
       </a>
     </div>
   )
