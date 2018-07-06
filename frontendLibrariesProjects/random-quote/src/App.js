@@ -14,6 +14,7 @@ const QUOTES = [
   {text: "I have not failed. I've just found 10,000 ways that won't work.", author: "Thomas A. Edison"},
   {text: "Every strike brings me closer to the next home run", author: "Babe Ruth"},
   {text: "The most difficult thing is the decision to act, the rest is merely tenacity.", author: "Amelia Earhart"},
+  {text: "The power of imagination makes us infinite.", author: "John Muir"},
   ]
   
 
