@@ -22,20 +22,26 @@ class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      text: "dkkdl",
+      author: "ddd",
     }
     this.getQuote = this.getQuote.bind(this);
-    console.log(`state - ${JSON.stringify(this.state)}`);
   };
 
   getQuote() {
-    const idx = Math.round(Math.random() * (QUOTES.length - 1));
-    const newQuote = QUOTES[idx];
+    // const idx = Math.round(Math.random() * (QUOTES.length - 1));
+    // const newQuote = QUOTES[idx];
     // console.log(`newQuote - ${JSON.stringify(newQuote)}`);
-    this.setState({
-      text: newQuote.text,
-      author: newQuote.author,
-    });
+    // let xhr = new XMLHttpRequest();
+    // xhr.open('GET', 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en', false);
+    // xhr.send();
+    // const m = xhr.responseText;
+    let n = fetch('http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en', {mode: "no-cors"});
+    console.log(n);
+    // this.setState({
+    //   text: newQuote.text,
+    //   author: newQuote.author,
+    // });
   };
 
   componentWillMount() {
@@ -108,7 +114,7 @@ const Footer = function() {
         target="_blank"
       >
         Dexter Freeman
-        <i class="fab fa-codepen"></i>
+        <i className="fab fa-codepen"></i>
       </a>
     </div>
   )
