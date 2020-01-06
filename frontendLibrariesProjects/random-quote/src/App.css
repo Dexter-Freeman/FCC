@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   background-color: #91939e94;
-  background-image: url(http://dexter-freeman.pro/wp-content/themes/df/assets/img/hero-bg.jpg);
+  background-image: url("./img/hero-bg.jpg");
   background-size: cover;
 }
 
@@ -19,7 +19,7 @@ body {
     border-radius: 5px;
     width: 480px;
     text-align: center;
-    background-image: url(http://dexter-freeman.pro/wp-content/uploads/2018/07/paper2-1.jpg)
+    background-image: url("./img/paper2.jpg")
 }
 
 #text {

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import logo from './logo.svg';
 import './App.css';
 
 
@@ -29,19 +27,20 @@ class Card extends Component {
   };
 
   getQuote() {
-    // const idx = Math.round(Math.random() * (QUOTES.length - 1));
-    // const newQuote = QUOTES[idx];
+    const idx = Math.round(Math.random() * (QUOTES.length - 1));
+    const newQuote = QUOTES[idx];
     // console.log(`newQuote - ${JSON.stringify(newQuote)}`);
     // let xhr = new XMLHttpRequest();
     // xhr.open('GET', 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en', false);
     // xhr.send();
     // const m = xhr.responseText;
-    let n = fetch('http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en', {mode: "no-cors"});
-    console.log(n);
-    // this.setState({
-    //   text: newQuote.text,
-    //   author: newQuote.author,
-    // });
+    // let n = fetch('http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en', {mode: "no-cors"});
+    // console.log(n);
+    this.setState({
+      
+      text: newQuote.text,
+      author: newQuote.author,
+    });
   };
 
   componentWillMount() {
@@ -97,7 +96,8 @@ const Tweet = props => {
     <a 
     id="tweet-quote" 
     title="Tweet this quote!" 
-    target="_blank" 
+    target="_blank"
+    rel="noopener noreferrer" 
     href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${encodeURIComponent(props.text)}`}
     >
       <i className="fab fa-twitter"></i>
@@ -112,6 +112,7 @@ const Footer = function() {
       <a 
         href="https://codepen.io/D-F/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Dexter Freeman
         <i className="fab fa-codepen"></i>
