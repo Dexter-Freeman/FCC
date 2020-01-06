@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/FCC/FLP-RCM/static/css/main.68451f1b.chunk.css",
+    "main.js": "/FCC/FLP-RCM/static/js/main.4be5fb1b.chunk.js",
+    "main.js.map": "/FCC/FLP-RCM/static/js/main.4be5fb1b.chunk.js.map",
+    "runtime-main.js": "/FCC/FLP-RCM/static/js/runtime-main.d6cb0ebd.js",
+    "runtime-main.js.map": "/FCC/FLP-RCM/static/js/runtime-main.d6cb0ebd.js.map",
+    "static/js/2.7bf706b5.chunk.js": "/FCC/FLP-RCM/static/js/2.7bf706b5.chunk.js",
+    "static/js/2.7bf706b5.chunk.js.map": "/FCC/FLP-RCM/static/js/2.7bf706b5.chunk.js.map",
+    "index.html": "/FCC/FLP-RCM/index.html",
+    "precache-manifest.89a81e9c1f863a44b18d30429c4d4ba8.js": "/FCC/FLP-RCM/precache-manifest.89a81e9c1f863a44b18d30429c4d4ba8.js",
+    "service-worker.js": "/FCC/FLP-RCM/service-worker.js",
+    "static/css/main.68451f1b.chunk.css.map": "/FCC/FLP-RCM/static/css/main.68451f1b.chunk.css.map",
+    "static/js/2.7bf706b5.chunk.js.LICENSE": "/FCC/FLP-RCM/static/js/2.7bf706b5.chunk.js.LICENSE",
+    "static/media/App.css": "/FCC/FLP-RCM/static/media/paper2.9a85650f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d6cb0ebd.js",
+    "static/js/2.7bf706b5.chunk.js",
+    "static/css/main.68451f1b.chunk.css",
+    "static/js/main.4be5fb1b.chunk.js"
+  ]
+}
