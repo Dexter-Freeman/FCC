@@ -1,12 +1,12 @@
 {
-	"name": "optimizedhtml",
+	"name": "d-f_survey-form",
 	"version": "5.0.0",
-	"description": "OptimizedHTML 5 - Start HTML Template",
-	"main": "index.js",
+	"description": "Dexter Freeman's Survey Form for FCC",
+	"main": "index.html",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "WebDesign Master",
+	"author": "Dexter Freeman",
 	"license": "ISC",
 	"devDependencies": {
 		"bootstrap": "^4.4.1",

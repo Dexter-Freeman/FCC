@@ -5,43 +5,140 @@
 
 	<meta charset="utf-8">
 
-	<title>OptimizedHTML 5</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<title>Dexter Freeman's Survey Form for FCC - Responsive Web Design Projects</title>
+	<meta name="description" content="Dexter Freeman's Survey Form for FCC - Responsive Web Design Projects">
 
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
 	
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/styles.min.css">
 
 </head>
 
 <body>
 
-	<!-- Custom HTML / Remove before use -->
-
 	<div class="container">
+		<h1 
+			id="title" 
+			class="title"
+			>
+			Dexter Freeman's <span class="accent">Survey Form</span> for FCC - Responsive Web Design Projects
+		</h1>
+		<p 
+			id="description"
+			class="description"
+			>
+			There is nothing to say, everything is clear
+		</p>
+		<form id="survey-form">
+			<div class="form-group">
+				<label 
+					for="name"
+					id="name-label"
+					class="label"
+					>Your name</label>
+				<input 
+					type="text" 
+					class="form-control" 
+					id="name" 
+					placeholder="Your name" 
+					required
+					>
+				<small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			</div>
+			<div class="form-group">
+				<label for="email" id="email-label" class="label">Your email</label>
+				<input 
+					type="email" 
+					class="form-control" 
+					id="email" 
+					placeholder="Your email"
+					required
+					>
+				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			</div>
+			<div class="form-group">
+				<label for="number" id="number-label" class="label">Your age</label>
+				<input 
+					type="number" 
+					class="form-control" 
+					id="number" 
+					placeholder="Your age"
+					min="1" 
+					max="150"
+				>
+				<small id="ageHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			</div>
+			<div class="form-group">
+				<label for="dropdown" class="label">How many repositories do you have?</label>
+				<select class="form-control" id="dropdown">
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>more</option>
+				</select>
+			</div>
+			<div class="choose">
+				<fieldset>
+					<legend class="label">Choose your favorite monster</legend>
+				
+					<input type="radio" id="kraken" name="monster" value="kraken">
+					<label for="kraken">Kraken</label><br/>
+				
+					<input type="radio" id="sasquatch" name="monster" value="sasquatch">
+					<label for="sasquatch">Sasquatch</label><br/>
+				
+					<input type="radio" id="mothman" name="monster" value="mothman">
+					<label for="mothman">Mothman</label><br/>
+				</fieldset>
+				<fieldset>
+					<legend class="label">You're A</legend>
+				
+					<input type="checkbox" id="great" name="youare" value="great">
+					<label for="kraken">Great</label><br/>
+				
+					<input type="checkbox" id="awesome" name="youare" value="awesome">
+					<label for="awesome">Awesome</label><br/>
+				
+					<input type="checkbox" id="fantastic" name="youare" value="fantastic">
+					<label for="fantastic">Fantastic</label><br/>
+	
+					<input type="checkbox" id="average" name="youare" value="average">
+					<label for="average">Average</label><br/>
+	
+					<input type="checkbox" id="wicked" name="youare" value="wicked">
+					<label for="wicked">wicked</label><br/>
+				</fieldset>
+			</div>
 
-		<div class="parent"> <!-- Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/ -->
-			<img class="lazy img-responsive example-img"
-			src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-			data-src="img/@1x/preview.jpg"
-			data-srcset="img/@1x/preview.jpg 1x, img/@2x/preview.jpg 2x"
-			alt="Start HTML5 Template">
-		</div>
-		<br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. <em>Ad distinctio animi</em>, dolorum eaque praesentium unde aliquid, mollitia itaque voluptate quos modi et incidunt tempora fugiat voluptatum quia esse dolor repellat.</p>
-		<br>
-		<div class="example-grid">
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quo vero molestias, esse doloribus corrupti, nemo minus ullam tempore tenetur magni aut quos soluta sit adipisci eius expedita amet non.</div>
-			<div>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
-		</div>
+			<label for="comment" class="label">Write a few words about yourself</label><br/>
+			<textarea 
+				name="comment" 
+				id="comment" 
+				class="comment"
+				placeholder="Remember, be nice!"
+				>
+			</textarea>
 
+			<button 
+				id="submit"
+				type="submit"
+				class="btn btn-warning submit"
+				>
+				Send
+			</button>
+
+		</form>
 	</div>
 
 	<script src="js/scripts.min.js"></script>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </body>
 </html>
