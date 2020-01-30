@@ -1,0 +1,138 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.wrapper
+	padding-top: 115px
+
+.header
+	padding: 10px 0
+	background-color: #000000
+	color: #fff
+	position: fixed
+	left: 0
+	right: 0
+	height: 115px
+	z-index: 1
+	.container
+		div
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+a, a:hover
+	text-decoration: none
+	color: #fff
+
+.nav
+	&-list
+		padding: 0
+		&__item
+			display: inline-block
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+
+.logo
+	align-self: flex-start
+
+.section-title
+	text-align: center
+
+.models
+	background: #ddd
+
+.models-list
+	display: flex
+	justify-content: space-around
+	list-style-type: none
+	padding: 0
+	flex-wrap: wrap
+	
+
+.model
+	&-list
+		&__item
+			background: #fff
+			padding: 10px
+			margin-bottom: 20px
+	&-item
+		width: 280px
+		&__title
+			text-align: center
+			font-weight: bold
+		&__pic
+			margin-top: 5px
+			& img
+				max-width: 100%
+		&__more
+			position: relative
+
+.button
+	cursor: pointer
+	font-size: 2rem
+	font-weight: 500
+	text-transform: uppercase
+	border: none
+	background: #032ea9
+	color: #fff
+	padding: 10px 30px
+	&_buy
+		float: right
+
+@import "media" // Всегда в конце
