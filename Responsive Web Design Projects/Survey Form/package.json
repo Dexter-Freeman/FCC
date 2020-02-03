@@ -1,12 +1,13 @@
 {
 	"name": "d-f_survey-form",
-	"version": "5.0.0",
-	"description": "Dexter Freeman's Survey Form for FCC",
+	"version": "1.0.0",
+	"description": "Dexter Freeman's Survey Form for FCC - Responsive Web Design Projects",
 	"main": "index.html",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "Dexter Freeman",
+	"author": "Dexter Freeman <vse.pisma.tut@gmail.com> (https://github.com/Dexter-Freeman)",
+  	"homepage": "https://codepen.io/D-F/pen/jOEoGYK",
 	"license": "ISC",
 	"devDependencies": {
 		"bootstrap": "^4.4.1",

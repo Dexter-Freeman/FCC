@@ -1,14 +1,13 @@
 {
-  "name": "d-f_product-landing",
+  "name": "d-f_project",
   "version": "1.0.0",
-  "description": "Dexter Freeman's Product Landing page for FCC - Responsive Web Design Projects",
+  "description": "Dexter Freeman's Projects",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dexter Freeman <vse.pisma.tut@gmail.com> (https://github.com/Dexter-Freeman)",
-  "homepage": "https://codepen.io/D-F/pen/QWwXmYR",
-  "license": "ISC",
+  "homepage": "https://codepen.io/D-F/pen/abzeorg",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dexter Freeman's Project</title>
+	<meta name="description" content="Dexter Freeman's Project">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.PNG" type="image/x-icon">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<nav id="navbar" class="navbar">
+
+			<header class="navbar__header">
+				JavaScript Functions
+			</header>
+
+			<ul class="nav-list">
+				<li class="nav-list__item">
+					<a href="#Arrow_function_expressions" class="nav-link">Arrow function expressions</a>
+				</li>
+				<li class="nav-list__item">
+					<a href="#Default_parameters" class="nav-link">Default parameters</a>
+				</li>
+				<li class="nav-list__item">
+					<a href="#Method_definitions" class="nav-link">Method definitions</a>
+				</li>
+				<li class="nav-list__item">
+					<a href="#Rest_parameters" class="nav-link">Rest parameters</a>
+				</li>
+				<li class="nav-list__item">
+					<a href="#The_arguments_object" class="nav-link">The arguments object</a>
+				</li>
+				<li class="nav-list__item">
+					<a href="#getter" class="nav-link">getter</a>
+				</li>
+				<li class="nav-list__item">
+					<a href="#setter" class="nav-link">setter</a>
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<main id="main-doc" class="main-content">
+
+			<section class="main-section" id="Arrow_function_expressions">
+				<header class="main-section__header">
+					Arrow function expressions
+				</header>
+				<p>
+					An arrow function expression is a syntactically compact alternative
+					to a regular function expression, although without its own bindings
+					to the this, arguments, super, or new.target keywords.
+					Arrow function expressions are ill suited as methods, and they
+					cannot be used as constructors.
+				</p>
+				<h3>Basic syntax</h3>
+
+				<pre>
+						<code>
+	(param1, param2, …, paramN) => { statements } 
+	(param1, param2, …, paramN) => expression
+	// equivalent to: => { return expression; }
+
+	// Parentheses are optional when there's only one parameter name:
+	(singleParam) => { statements }
+	singleParam => { statements }
+
+	// The parameter list for a function with no parameters should be written with a pair of parentheses.
+	() => { statements }
+						</code>
+					</pre>
+
+			</section>
+
+			<section class="main-section" id="Default_parameters">
+				<header class="main-section__header">
+					Default parameters
+				</header>
+				<p>
+					Default function parameters allow named parameters to be initialized
+					with default values if no value or undefined is passed.
+				</p>
+				<pre>
+					<code>
+function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
+	statements
+ }
+				</code>
+				</pre>
+			</section>
+
+			<section class="main-section" id="Method_definitions">
+				<header class="main-section__header">
+					Method definitions
+				</header>
+				<p>
+					Starting with ECMAScript 2015, a shorter syntax for method definitions
+					on objects initializers is introduced. It is a shorthand for a
+					function assigned to the method's name.
+				</p>
+				<pre>
+					<code>
+	const obj = {
+	property( parameters… ) {},
+	*generator( parameters… ) {},
+	async property( parameters… ) {},
+	async* generator( parameters… ) {},
+	
+	//  with computed keys
+	[property]( parameters… ) {},
+	*[generator]( parameters… ) {},
+	async [property]( parameters… ) {},
+	
+	// compare getter/setter syntax:
+	get property() {},
+	set property(value) {}
+	};
+					</code>
+				</pre>
+				<p>When doing so:</p>
+				<ul>
+					<li>
+						The asterisk (*) in the shorthand syntax must be before the
+						generator property name. (That is, * g(){} will work, but g *(){} will not.)
+					</li>
+					<li>
+						Non-generator method definitions cannot contain the yield keyword.
+						This means that legacy generator functions won't work either, and will throw a
+						SyntaxError. Always use yield in conjunction with the asterisk (*).
+					</li>
+				</ul>
+			</section>
+
+			<section class="main-section" id="Rest_parameters">
+				<header class="main-section__header">
+					Rest parameters
+				</header>
+				<p>
+					A function's last parameter can be prefixed with ... which will cause
+					all remaining (user supplied) arguments to be placed within a "standard"
+					Javascript array.
+
+					Only the last parameter can be a "rest parameter".
+				</p>
+				<pre>
+					<code>
+function myFun(a, b, ...manyMoreArgs) {
+	console.log("a", a)
+	console.log("b", b)
+	console.log("manyMoreArgs", manyMoreArgs)
+  }
+  
+  myFun("one", "two", "three", "four", "five", "six")
+  
+  // Console Output:
+  // a, one
+  // b, two
+  // manyMoreArgs, [three, four, five, six]
+					</code>
+				</pre>
+				<p>
+					There are three main differences between rest parameters and
+					the arguments object:
+				</p>
+				<ul>
+					<li>
+						rest parameters are only the ones that haven't been given a
+						separate name (i.e. formally defined in function expression),
+						while the arguments object contains all arguments passed to the function;
+					</li>
+					<li>
+						the arguments object is not a real array, while rest parameters are Array
+						instances, meaning methods like sort, map, forEach or pop can be
+						applied on it directly;
+					</li>
+					<li>
+						the arguments object has additional functionality specific
+						to itself (like the callee property).
+					</li>
+				</ul>
+			</section>
+
+			<section class="main-section" id="The_arguments_object">
+				<header class="main-section__header">
+					The arguments object
+				</header>
+				<p>
+					The arguments object is a local variable available within all
+					non-arrow functions. You can refer to a function's arguments
+					inside that function by using its arguments object. It has
+					entries for each argument the function was called with, with
+					the first entry's index at 0.
+
+					For example, if a function is passed 3 arguments, you can access them as follows:
+				</p>
+				<pre>
+					<code>
+arguments[0] // first argument
+arguments[1] // second argument
+arguments[2] // third argument
+					</code>
+				</pre>
+			</section>
+
+			<section class="main-section" id="getter">
+				<header class="main-section__header">
+					getter
+				</header>
+				<p>
+					Sometimes it is desirable to allow access to a property
+					that returns a dynamically computed value, or you may want
+					to reflect the status of an internal variable without requiring
+					the use of explicit method calls. In JavaScript, this can be
+					accomplished with the use of a getter.
+
+				</p>
+				<p>
+					It is not possible to simultaneously have a getter bound to a
+					property and have that property actually hold a value, although
+					it is possible to use a getter and a setter in conjunction to
+					create a type of pseudo-property.
+				</p>
+
+				<pre>
+					<code>
+const obj = {
+	log: ['example','test'],
+	get latest() {
+	  if (this.log.length === 0) return undefined;
+	  return this.log[this.log.length - 1];
+	}
+  }
+  console.log(obj.latest); // "test"
+					</code>
+				</pre>
+				<ul>
+					<li>
+						It can have an identifier which is either a number or a string;
+					</li>
+					<li>
+						It must have exactly zero parameters (see Incompatible ES5 change:
+						literal getter and setter functions must now have exactly zero or
+						one arguments for more information);
+					</li>
+				</ul>
+			</section>
+
+			<section class="main-section" id="setter">
+				<header class="main-section__header">
+					setter
+				</header>
+				<p>
+					In JavaScript, a setter can be used to execute a function
+					whenever a specified property is attempted to be changed.
+					Setters are most often used in conjunction with getters to
+					create a type of pseudo-property. It is not possible to
+					simultaneously have a setter on a property that holds an actual value.
+				</p>
+				<pre>
+					<code>
+const language = {
+	set current(name) {
+	  this.log.push(name);
+	},
+	log: []
+  }
+  
+  language.current = 'EN';
+  console.log(language.log); // ['EN']
+  
+  language.current = 'FA';
+  console.log(language.log); // ['EN', 'FA']
+					</code>
+				</pre>
+			</section>
+
+		</main>
+
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+
+</html>
